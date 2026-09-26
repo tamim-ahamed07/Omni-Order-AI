@@ -1,0 +1,37 @@
+{
+  "name": "omniorder-ai-backend",
+  "version": "1.0.0",
+  "description": "OmniOrder AI — Azure Functions backend",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "clean": "rimraf dist",
+    "prestart": "npm run clean && npm run build",
+    "start": "func start",
+    "emulator": "azurite --silent --location .azurite --debug .azurite/debug.log --skipApiVersionCheck",
+    "dev": "npm run build && concurrently --names \"azurite,tsc,func\" --prefix-colors \"blue,yellow,green\" \"npm run emulator\" \"npm run watch\" \"func start\"",
+    "test": "echo \"No tests yet...\"",
+    "publish:az": "bash ./scripts/publish.sh omniorderai rg-omniorderai-dev"
+  },
+  "dependencies": {
+    "@azure/data-tables": "^13.3.2",
+    "@azure/functions": "^4.0.0",
+    "@azure/storage-blob": "^12.31.0",
+    "@azure/storage-queue": "^12.29.0",
+    "@openai/agents": "^0.3.7",
+    "@types/pg": "^8.20.0",
+    "applicationinsights": "^3.15.0",
+    "openai": "^6.15.0",
+    "pg": "^8.20.0",
+    "stripe": "^18.5.0",
+    "zod": "^4.2.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.x",
+    "azurite": "^3.35.0",
+    "concurrently": "^9.2.1",
+    "rimraf": "^5.0.0",
+    "typescript": "^5.0.0"
+  },
+  "main": "dist/src/{index.js,functions/*.js}"
+}

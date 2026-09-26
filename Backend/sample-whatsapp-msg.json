@@ -1,0 +1,41 @@
+{
+    "object": "whatsapp_business_account",
+    "entry": [
+        {
+            "id": "1279733773973170",
+            "changes": [
+                {
+                    "value": {
+                        "messaging_product": "whatsapp",
+                        "metadata": {
+                            "display_phone_number": "15551531859",
+                            "phone_number_id": "944719458723020"
+                        },
+                        "contacts": [
+                            {
+                                "profile": {
+                                    "name": "Sharif Rahaman"
+                                },
+                                "wa_id": "16572290125",
+                                "country_code": "US"
+                            }
+                        ],
+                        "messages": [
+                            {
+                                "from": "16572290125",
+                                "id": "wamid.HBgLMTY1NzIyOTAxMjUVAgASGCBBQzMyM0MyN0M1RTExMjY1MDU4RTQyM0M3MzNFMUE0MAA=",
+                                "timestamp": "1772128959",
+                                "text": {
+                                    "body": "Menu please"
+                                },
+                                "from_logical_id": "236854578278544",
+                                "type": "text"
+                            }
+                        ]
+                    },
+                    "field": "messages"
+                }
+            ]
+        }
+    ]
+}
